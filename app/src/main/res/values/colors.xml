@@ -7,5 +7,7 @@
     <color name="white">#FFFFFF</color>
     <color name="lightGrey">#cccccc</color>
     <color name="lightest_blue">#8DA9C4</color>
+    <color name="dark_grey">#5c5c5c</color>
+    <color name="logoAccent">#171e4b</color>
 
 </resources>
