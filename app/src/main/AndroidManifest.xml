@@ -16,8 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DriverDashboardActivity">
-
+        <activity android:name=".DriverDashboardActivity"
+            android:theme="@style/ReachAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+            </intent-filter>
         </activity>
     </application>
 
