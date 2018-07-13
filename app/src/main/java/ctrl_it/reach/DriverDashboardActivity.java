@@ -33,22 +33,6 @@ public class DriverDashboardActivity extends AppCompatActivity{
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-//        navigationView.setNavigationItemSelectedListener(
-//                new NavigationView.OnNavigationItemSelectedListener() {
-//                    @Override
-//                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-//                        DrawerLayout mDrawerLayout = findViewById(R.id.drawer_layout);
-//                        // set item as selected to persist highlight
-//                        menuItem.setChecked(true);
-//                        // close drawer when item is tapped
-//                        mDrawerLayout.closeDrawers();
-//
-//                        // Add code here to update the UI based on the item selected
-//                        // For example, swap UI fragments here
-//
-//                        return true;
-//                    }
-//                });
         setupDrawerContent(navigationView);
 
     }
