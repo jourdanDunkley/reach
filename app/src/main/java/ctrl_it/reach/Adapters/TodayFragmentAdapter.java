@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -13,16 +14,17 @@ import ctrl_it.reach.Models.Ride;
 import ctrl_it.reach.R;
 
 public class TodayFragmentAdapter extends RecyclerView.Adapter<TodayFragmentAdapter.ViewHolder> {
-    private List<Ride> rideList;
+    private List<Ride> rideList = null;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView label, description, date;
+        public ImageView img;
         public ViewHolder(View v) {
             super(v);
-            label = (TextView) itemView.findViewById(R.id.label);
             description = (TextView) itemView.findViewById(R.id.description);
             date = (TextView) itemView.findViewById(R.id.date);
+            img = (ImageView)itemView.findViewById(R.id.img);
         }
     }
 
@@ -44,9 +46,9 @@ public class TodayFragmentAdapter extends RecyclerView.Adapter<TodayFragmentAdap
     @Override
     public void onBindViewHolder(@NonNull TodayFragmentAdapter.ViewHolder holder, int position) {
         Ride ride = rideList.get(position);
-        holder.label.setText(ride.getLabel());
         holder.date.setText(ride.getDate());
         holder.description.setText(ride.getDescription());
+        holder.img.setImageResource(ride.getImageURL());
     }
 
     @Override

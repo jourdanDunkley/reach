@@ -3,6 +3,7 @@ package ctrl_it.reach.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +17,9 @@ import ctrl_it.reach.Adapters.TodayFragmentAdapter;
 import ctrl_it.reach.Models.Ride;
 import ctrl_it.reach.R;
 
+import static android.support.v7.widget.DividerItemDecoration.HORIZONTAL;
+import static android.support.v7.widget.DividerItemDecoration.VERTICAL;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -24,6 +28,8 @@ public class TodayFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private List<Ride> rideList = new ArrayList<>();
+    private static int i;
+    private DividerItemDecoration mDividerItemDecoration;
 
     public TodayFragment() {
         // Required empty public constructor
@@ -48,15 +54,20 @@ public class TodayFragment extends Fragment {
         // specify an adapter (see also next example)
         mAdapter = new TodayFragmentAdapter(rideList);
         mRecyclerView.setAdapter(mAdapter);
+
+        mDividerItemDecoration = new DividerItemDecoration(mRecyclerView.getContext(),
+                VERTICAL);
+        mRecyclerView.addItemDecoration(mDividerItemDecoration);
         prepareRideData();
 
         return view;
     }
 
     private void prepareRideData() {
-        for(int i=0;i<5;i++){
-            Ride ride = new Ride("Date", "Description", "Label", "Image");
+        while(i<5){
+            Ride ride = new Ride("7/23/2018", "Driver Details", "Label", R.mipmap.ic_tropical_round);
             rideList.add(ride);
+            i++;
         }
         mAdapter.notifyDataSetChanged();
     }

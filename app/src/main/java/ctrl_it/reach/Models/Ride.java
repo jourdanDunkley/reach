@@ -5,15 +5,16 @@ public class Ride {
     private String description;
     private String label;
     private String image;
+    private int imageURL;
 
     public Ride(){
 
     }
-    public Ride(String date, String description, String label, String image) {
+    public Ride(String date, String description, String label, int imageURL) {
         this.date = date;
         this.description = description;
         this.label = label;
-        this.image = image;
+        this.imageURL = imageURL;
     }
 
     public String getDate() {
@@ -46,5 +47,13 @@ public class Ride {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public void setImageURL(int imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    public int getImageURL() {
+        return imageURL;
     }
 }
