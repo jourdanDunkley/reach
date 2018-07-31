@@ -13,7 +13,7 @@ import java.util.List;
 import ctrl_it.reach.Models.Ride;
 import ctrl_it.reach.R;
 
-public class TodayFragmentAdapter extends RecyclerView.Adapter<TodayFragmentAdapter.ViewHolder> {
+public class RideFragmentAdapter extends RecyclerView.Adapter<RideFragmentAdapter.ViewHolder> {
     private List<Ride> rideList = null;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -28,14 +28,14 @@ public class TodayFragmentAdapter extends RecyclerView.Adapter<TodayFragmentAdap
         }
     }
 
-    public TodayFragmentAdapter(List<Ride> rideList) {
+    public RideFragmentAdapter(List<Ride> rideList) {
        this.rideList = rideList;
     }
 
 
     @NonNull
     @Override
-    public TodayFragmentAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RideFragmentAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = (View) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.ride_list_record, parent, false);
 
@@ -44,7 +44,7 @@ public class TodayFragmentAdapter extends RecyclerView.Adapter<TodayFragmentAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TodayFragmentAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RideFragmentAdapter.ViewHolder holder, int position) {
         Ride ride = rideList.get(position);
         holder.date.setText(ride.getDate());
         holder.description.setText(ride.getDescription());

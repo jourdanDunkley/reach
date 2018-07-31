@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "275081820920",
+    "firebase_url": "https://reach-test-d2880.firebaseio.com",
+    "project_id": "reach-test-d2880",
+    "storage_bucket": "reach-test-d2880.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275081820920:android:34c17fc0074e5256",
+        "android_client_info": {
+          "package_name": "ctrl_it.reach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275081820920-5qtk8fk2pkgobg3gr9lbpjm5547358ua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-doJtC9sx9mjPEd9-ky9_kckw7WjN0Lg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

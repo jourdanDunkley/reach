@@ -13,11 +13,10 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import ctrl_it.reach.Adapters.TodayFragmentAdapter;
+import ctrl_it.reach.Adapters.RideFragmentAdapter;
 import ctrl_it.reach.Models.Ride;
 import ctrl_it.reach.R;
 
-import static android.support.v7.widget.DividerItemDecoration.HORIZONTAL;
 import static android.support.v7.widget.DividerItemDecoration.VERTICAL;
 
 /**
@@ -52,7 +51,7 @@ public class TodayFragment extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new TodayFragmentAdapter(rideList);
+        mAdapter = new RideFragmentAdapter(rideList);
         mRecyclerView.setAdapter(mAdapter);
 
         mDividerItemDecoration = new DividerItemDecoration(mRecyclerView.getContext(),
